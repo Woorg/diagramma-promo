@@ -1,0 +1,18 @@
+extends /blocks/layout-default/layout-default
+
+include /blocks/header/header
+include /blocks/hero/hero
+include /blocks/how/how
+include /blocks/footer/footer
+
+
+
+block head
+	- var pageTitle = 'Диаграмма интернет-агенство';
+
+block content
+	+header()
+	+hero()
+	+how()
+
+	+footer()
