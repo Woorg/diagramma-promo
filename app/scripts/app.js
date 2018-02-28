@@ -1,8 +1,9 @@
 import svg4everybody from 'svg4everybody';
-// import $ from 'jquery';
+import $ from 'jquery';
 // import slick from 'slick-carousel';
-// import 'magnific-popup';
+import 'magnific-popup';
 import mask from "jquery-mask-plugin";
+import 'jquery-validation';
 // import printThis from "print-this";
 
 (function ($) {
@@ -25,6 +26,72 @@ import mask from "jquery-mask-plugin";
 
 	$(function() {
 		svg4everybody();
+
+		// Nav
+
+		const $navTrigger = $('.header__trigger');
+		const $navW = $('.header__w');
+		const $pOverlay = $('.page__overlay');
+
+
+		$('.header__trigger').on('click', function (e) {
+			e.preventDefault();
+			e.stopPropagation();
+
+
+			$pOverlay.toggleClass('page__overlay_active');
+			$navW.toggleClass('header__w_active');
+
+			$(document).on('click', function(e) {
+				if (!$(e.target).closest($navW).length) {
+					$navW.removeClass('header__w_active');
+					$pOverlay.removeClass('page__overlay_active');
+				}
+			});
+
+		});
+
+
+		let $hHeight = $('.header').height();
+
+		$('.nav a, .logo').on('click', function(e) {
+			var _scroll = $(this).attr('href');
+
+			$navW.removeClass('header__w_active');
+			$pOverlay.removeClass('page__overlay_active');
+
+			if (_scroll != '#' && $(_scroll).length) {
+				$('html, body').animate({ scrollTop: $(_scroll).offset().top - ($hHeight / 2) }, 800);
+			}
+		});
+
+
+		$('.page').css('paddingTop', $hHeight );
+
+		$(window).on('scroll', function(e) {
+			if($(window).scrollTop() > 0 ) {
+				$('.page').css('paddingTop', $hHeight );
+				$('.header').addClass('header_fixed');
+			} else {
+				$('.page').css('paddingTop', $hHeight );
+
+				$('.header').removeClass('header_fixed');
+			}
+		});
+
+		$(window).on('resize', function(e) {
+			$hHeight = $('.header').height();
+			$(window).on('scroll', function(e) {
+				if($(window).scrollTop() > $hHeight ) {
+					$('.page').css('paddingTop', $hHeight );
+					$('.header').addClass('header_fixed');
+				} else {
+					$('.page').css('paddingTop', $hHeight );
+
+					$('.header').removeClass('header_fixed');
+				}
+			});
+		});
 
 
 		// mask
@@ -59,6 +126,33 @@ import mask from "jquery-mask-plugin";
 			return false;
 
 		});
+
+
+		// Validation
+
+		const subscribeForm = $('#subscribe-form');
+
+		subscribeForm.validate({
+			rules: {
+				subscribe_email : {
+					required: true,
+					email: true
+				}
+			},
+			message: {
+				subscribe_email: {
+					required: '',
+					email: ''
+				}
+			}
+		});
+
+		// $.validator.seDefaults({
+		// 	errorPlacement: function (error, element) {
+		// 		element.parent()
+		// 		attr("placeholder", error[0].outerText);
+		// 	}
+		// });
 
 
 

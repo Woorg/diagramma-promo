@@ -6,7 +6,7 @@ include ../scripts/scripts
 doctype html
 html(lang='ru')
 	include ../head/head
-	+page
+	+page#top
 		block content
 		+scripts(['//api-maps.yandex.ru/2.1/?lang=ru_RU', 'app.min.js'])
 
@@ -32,13 +32,19 @@ html(lang='ru')
 				//- 	position: {top: 15, left: 15}
 				//- });
 
-				myPlacemark = new ymaps.Placemark([56.876250, 53.212234] , {},
-					{ iconLayout: 'default#image',
-					  iconImageHref: 'assets/images/general/map-marker.png',
-					  iconImageSize: [180,226],
-					  iconImageOffset: [-15,-45]
-				});
+				if( $(window).width() <= 425 ) {
 
-				myMap.geoObjects.add(myPlacemark);
+				} else {
+
+					myPlacemark = new ymaps.Placemark([56.876250, 53.212234] , {},
+						{ iconLayout: 'default#image',
+						  iconImageHref: 'assets/images/general/map-marker.png',
+						  iconImageSize: [180,226],
+						  iconImageOffset: [-96,-200]
+					});
+
+					myMap.geoObjects.add(myPlacemark);
+
+				}
 
 			}

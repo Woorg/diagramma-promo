@@ -102,6 +102,7 @@
     "jade-injected": "^1.0.2",
     "jquery": "^2.1.4",
     "jquery-mask-plugin": "^1.14.13",
+    "jquery-validation": "^1.17.0",
     "magnific-popup": "^1.1.0",
     "merge-stream": "^1.0.0",
     "node-notifier": "^4.3.1",

@@ -5,19 +5,16 @@
 		@extends .container
 		padding-top 130px
 		padding-bottom 163px
+		+r($m)
+			padding-top 70px
+			padding-bottom 20px
 	&__title
 		margin-bottom 34px
-		padding-right 27px
 		@extends .title
 		color #60cbe8
 		text-align center
-	&__list
-		margin-left -30px
-
-	// &__item
-
-	// &__item_active
-
+		+r($m)
+			margin-bottom 18px
 	&__term
 		position relative
 		padding-top 21px
@@ -30,6 +27,12 @@
 		font-weight normal
 		cursor pointer
 		tr(all .3s ease)
+		+r($m)
+			padding-left 15px
+			padding-right 50px
+			padding-bottom 10px
+			font-size 12px
+			font-weight bold
 		&:after
 			position absolute
 			top 50%
@@ -39,7 +42,10 @@
 			background url('../images/general/plus.png') 0 0 / cover no-repeat
 			content ''
 			transform translateY(-50%)
-
+			+r($m)
+				right 15px
+				width 28px
+				height 28px
 	&__term_active,
 	&__term:hover
 		position relative
@@ -54,6 +60,10 @@
 			background url('../images/general/minus.png') 0 0 / cover no-repeat
 			content ''
 			transform translateY(-50%)
+			+r($m)
+				right 15px
+				width 28px
+				height 28px
 	&__desc
 		padding-top 30px
 		padding-right 46px
@@ -66,5 +76,8 @@
 		line-height 1.666
 		font-style italic
 		font-weight normal
-
-
+		+r($m)
+			padding-top 15px
+			padding-bottom 15px
+			padding-left 0
+			font-size 11px

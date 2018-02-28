@@ -1,4 +1,5 @@
 .page
+	position relative
 	background #fff
 	font-display swap
 	font-family $t
@@ -7,17 +8,42 @@
 	color #212121
 	line-height 1.5
 	tr(all .3s linear)
+	+r(1230px)
+		width 1230px
+	+r($m)
+		width 100%
 
+	&__overlay
+		position absolute
+		z-index 9
+		top 0
+		left 0
+		right 0
+		bottom 0
+		display none
+		background rgba(0,0,0, .5)
+		tr(all .3s ease)
+	&__overlay_active
+		display block
+		cursor pointer
+		tr(all .3s ease)
 .container
 	margin auto
 	padding-right 15px
 	padding-left 15px
-	max-width 1200px
+	width 1230px
+	+r($m)
+		padding-left 10px
+		padding-right 10px
+		width 360px
 
 .title
 	font-weight bold
 	font-size 48px
 	text-transform uppercase
+	+r($m)
+		font-size ( $titleSize / 2 )px
+		line-height 1.3
 
 .title-sec
 	position relative
@@ -25,6 +51,10 @@
 	font-size 36px
 	font-weight bold
 	text-transform uppercase
+	+r($m)
+		font-size ( $titleSize / 2 )px
+		line-height 1.3
+
 	&:after
 		position absolute
 		bottom 0

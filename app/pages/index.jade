@@ -14,6 +14,7 @@ include /blocks/map/map
 
 
 include /blocks/footer/footer
+include /blocks/popup/popup
 
 
 
@@ -23,14 +24,17 @@ block head
 block content
 	+header()
 	+hero()
-	+how()
-	+whom()
-	+where()
-	+what()
-	+discuss()
-	+advantages()
-	+how-much()
-	+faq()
-	+map()
-	+discuss()
+	+how()#how
+	+whom()#whom
+	+where()#where
+	+what()#what
+	+discuss()#discuss
+	+advantages()#advantages
+	+how-much()#how-much
+	+faq()#faq
+	+map()#map
+	+discuss().discuss_hide#discuss-second
 	+footer()
+
+	+popup().mfp-hide
+	.page__overlay

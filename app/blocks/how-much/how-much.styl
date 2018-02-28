@@ -5,15 +5,20 @@
 		@extends .container
 		padding-top 130px
 		padding-bottom 144px
+		+r($m)
+			padding-top 70px
+			padding-bottom 70px
 	&__title
 		margin-bottom 46px
-		padding-right 30px
 		@extends .title
 		text-align center
 		color #60cbe8
+		+r($m)
+			margin-bottom 30px
 	&__list
-		margin-left -30px
-		margin-bottom 55px
+		margin-bottom 52px
+		+r($m)
+			margin-bottom 30px
 	&__item
 		padding-top 20px
 		padding-right 24px
@@ -23,9 +28,12 @@
 		flex-flow row wrap
 		justify-content space-between
 		align-items center
-
 		font-weight bold
 		font-size 20px
+		+r($m)
+			padding-left 15px
+			padding-right 15px
+			font-size 11px
 		&:nth-child(odd)
 			background #FFF
 		&:nth-child(even)
@@ -40,4 +48,6 @@
 		font-weight normal
 		line-height 1.333
 		text-align center
+		+r($m)
+			font-size 11px
 
