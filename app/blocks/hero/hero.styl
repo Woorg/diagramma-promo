@@ -1,3 +1,104 @@
 .hero
-	display block
+	background-color #60cbe8
+	&__container
+		padding-top 130px
+		padding-bottom 152px
+		@extends .container
+		color #FFF
+		text-align center
+	&__title
+		margin-right 30px
+		margin-bottom 14px
+	&__text
+		margin-bottom 75px
+		padding-right 28px
+		font-family $t
+		font-size 30px
+		line-height 1.3
+		font-weight normal
+
+	&__image
+		position relative
+		margin auto
+		width 747px
+	&__badge
+		position absolute
+		width 62px
+		height 62px
+		background url('../images/general/badge.svg') 0 0 / cover no-repeat
+	&__badge_left
+		top 100px
+		left -64px
+	&__badge_right
+		top 27px
+		right -90px
+	&__badge-text
+		position absolute
+		top 50%
+		left 50%
+		color #60cbe8
+		font-family $t
+		font-size 16px
+		font-weight bold
+		text-transform uppercase
+		letter-spacing tracking(50)
+		transform translate(-50%, -50%)
+	&__icon
+		position absolute
+		z-index 1
+		width 85px
+		height 85px
+		background-color #ffffff
+		border-radius 50%
+		&:after
+			position absolute
+			top 50%
+			left 50%
+			content ''
+			transform translate(-50%, -50%)
+	&__icon_market
+		top 43px
+		left -142px
+		&:after
+			retinaSprite($icon_1_group)
+	&__icon_gym
+		bottom -2px
+		left -86px
+		&:after
+			retinaSprite($icon_3_group)
+	&__icon_car-repair
+		top 63px
+		right -165px
+		&:after
+			retinaSprite($icon_2_group)
+	&__icon_coffee
+		bottom 50px
+		right 11px
+		&:after
+			retinaSprite($icon_4_group)
+
+	&__pointer
+		position absolute
+	&__pointer_market
+		top 86px
+		left -90px
+		retinaSprite($pointer_t_l_group)
+	&__pointer_gym
+		bottom 38px
+		left -84px
+		retinaSprite($pointer_b_l_group)
+	&__pointer_car-repair
+		top 108px
+		right -128px
+		retinaSprite($pointer_t_r_group)
+	&__pointer_coffee
+		bottom 88px
+		right 38px
+		retinaSprite($pointer_b_r_group)
+
+
+
+
+
+
 

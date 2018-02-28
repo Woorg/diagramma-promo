@@ -1,2 +1,31 @@
 .where
-	display block
+	&__container
+		@extends .container
+		padding-top 120px
+		padding-bottom 130px
+		clr()
+	&__w
+		margin-left -30px
+		padding-top 57px
+		width 580px
+		float left
+	&__title
+		margin-bottom 74px
+		@extends .title-sec
+		color #484848
+
+	// &__list
+
+	&__item
+		margin-bottom 32px
+		color #595959
+		font-weight bold
+		&:last-child
+			margin-bottom 0
+		span
+			color #60cbe8
+			display block
+			font-weight normal
+	&__image
+		width 579px
+		float right

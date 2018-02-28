@@ -1,2 +1,38 @@
-// .header
+.header
+	background #FFF
+	&__container
+		padding-top 24px
+		padding-bottom 19px
+		@extends .container
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+		align-items center
+	&__logo
+		margin-left -28px
+	// 	float left
+	&__nav
+		// margin-right 15px
+		width 650px
 
+.logo
+	retinaSprite($logo_group)
+	hide-text()
+
+.nav
+	&__list
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+	// &__item,
+	// li
+
+	&__link,
+	a
+		color #212121
+		font-weight normal
+		font-size 16px
+		font-family $t
+		text-decoration none
+		text-transform uppercase
+		letter-spacing tracking(50)

@@ -1,2 +1,70 @@
 .faq
-	display block
+	background #FFF
+	overflow hidden
+	&__container
+		@extends .container
+		padding-top 130px
+		padding-bottom 163px
+	&__title
+		margin-bottom 34px
+		padding-right 27px
+		@extends .title
+		color #60cbe8
+		text-align center
+	&__list
+		margin-left -30px
+
+	// &__item
+
+	// &__item_active
+
+	&__term
+		position relative
+		padding-top 21px
+		padding-bottom 19px
+		padding-right 28px
+		padding-left 28px
+		background #f4f7f7
+		color #555555
+		font-size 20px
+		font-weight normal
+		cursor pointer
+		tr(all .3s ease)
+		&:after
+			position absolute
+			top 50%
+			right 28px
+			width 48px
+			height 48px
+			background url('../images/general/plus.png') 0 0 / cover no-repeat
+			content ''
+			transform translateY(-50%)
+
+	&__term_active,
+	&__term:hover
+		position relative
+		background #60cbe8
+		color #FFF
+		&:after
+			position absolute
+			top 50%
+			right 28px
+			width 48px
+			height 48px
+			background url('../images/general/minus.png') 0 0 / cover no-repeat
+			content ''
+			transform translateY(-50%)
+	&__desc
+		padding-top 30px
+		padding-right 46px
+		padding-bottom 28px
+		padding-left 46px
+		display none
+		background #FFF
+		color #888888
+		font-size 18px
+		line-height 1.666
+		font-style italic
+		font-weight normal
+
+

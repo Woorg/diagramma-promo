@@ -1,3 +1,33 @@
 .footer
 	display block
+	&__container
+		@extends .container
+		padding-top 64px
+		padding-bottom 68px
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+		align-items center
+	&__logo
+		margin-left -30px
 
+	&__contacts
+		margin-left -46px
+
+	&__cert
+		retinaSprite($certified_group)
+
+.f-contacts
+	&__item
+		font-size 18px
+		font-style italic
+		font-weight normal
+		line-height 1.666
+		span
+			padding-right 10px
+			color #888888
+		a
+			color #5dcbe8
+			text-decoration none
+			&:hover
+				text-decoration underline

@@ -8,4 +8,37 @@ html(lang='ru')
 	include ../head/head
 	+page
 		block content
-		+scripts(['app.min.js'])
+		+scripts(['//api-maps.yandex.ru/2.1/?lang=ru_RU', 'app.min.js'])
+
+
+		script.
+			ymaps.ready(init);
+
+			var myMap;
+			var myPlacemark;
+
+			function init (){
+
+
+				myMap = new ymaps.Map("map", {
+					center: [56.876250, 53.212234],
+					zoom: 17,
+					controls: []
+				});
+
+				myMap.behaviors.disable('scrollZoom');
+
+				//- myMap.controls.add("zoomControl", {
+				//- 	position: {top: 15, left: 15}
+				//- });
+
+				myPlacemark = new ymaps.Placemark([56.876250, 53.212234] , {},
+					{ iconLayout: 'default#image',
+					  iconImageHref: 'assets/images/general/map-marker.png',
+					  iconImageSize: [180,226],
+					  iconImageOffset: [-15,-45]
+				});
+
+				myMap.geoObjects.add(myPlacemark);
+
+			}

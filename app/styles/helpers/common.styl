@@ -1,18 +1,44 @@
 .page
 	background #fff
 	font-display swap
+	font-family $t
 	font-weight normal
-	font-size 16px
+	font-size 20px
 	color #212121
 	line-height 1.5
 	tr(all .3s linear)
 
+.container
+	margin auto
+	padding-right 15px
+	padding-left 15px
+	max-width 1200px
+
+.title
+	font-weight bold
+	font-size 48px
+	text-transform uppercase
+
+.title-sec
+	position relative
+	padding-bottom 10px
+	font-size 36px
+	font-weight bold
+	text-transform uppercase
+	&:after
+		position absolute
+		bottom 0
+		left 0
+		width 141px
+		height 4px
+		content ''
+		background-color #60cbe8
+		color #FFF
 
 img
 	display block
 	max-width 100%
 	height auto
-
 
 // .wysiwyg
 

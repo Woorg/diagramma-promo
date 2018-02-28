@@ -1,2 +1,43 @@
 .how-much
-	display block
+	background-color #f4f7f7
+	overflow hidden
+	&__container
+		@extends .container
+		padding-top 130px
+		padding-bottom 144px
+	&__title
+		margin-bottom 46px
+		padding-right 30px
+		@extends .title
+		text-align center
+		color #60cbe8
+	&__list
+		margin-left -30px
+		margin-bottom 55px
+	&__item
+		padding-top 20px
+		padding-right 24px
+		padding-bottom 20px
+		padding-left 30px
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+		align-items center
+
+		font-weight bold
+		font-size 20px
+		&:nth-child(odd)
+			background #FFF
+		&:nth-child(even)
+			background #f4f7f7
+	&__term
+		color #555555
+	&__desc
+		color #60cbe8
+	&__note
+		color #8f9999
+		font-size 18px
+		font-weight normal
+		line-height 1.333
+		text-align center
+

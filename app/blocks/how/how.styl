@@ -1,2 +1,63 @@
 .how
-	display block
+	overflow hidden
+	&__container
+		@extends .container
+		padding-top 130px
+		padding-right 48px
+		padding-bottom 0px
+	&__title
+		margin-bottom 15px
+		color #60cbe8
+		text-align center
+	&__text
+		margin-bottom 68px
+	&__w
+		clr()
+	&__example
+		padding-top 34px
+		padding-left 20px
+		width 564px
+		float right
+	&__example-title
+		margin-bottom 42px
+		color #60cbe8
+		font-family $t
+		font-size 30px
+		text-transform uppercase
+	// &__list
+	&__item
+		position relative
+		margin-bottom 50px
+		padding-left 106px
+		min-height 76px
+		font-size 20px
+		line-height 1.2
+		font-weight normal
+		&:last-child
+			margin-bottom 0
+	&__item-text
+		position absolute
+		top 50%
+		left 106px
+		transform translateY(-50%)
+	&__item-icon
+		position absolute
+		top 50%
+		left 0
+		width 76px
+		height 76px
+		border 1px solid #60cbe8
+		background-color #ffffff
+		border-radius 50%
+		transform translateY(-50%)
+		img
+			position absolute
+			top 50%
+			left 50%
+			transform translate(-50%, -50%)
+	&__image
+		margin-left -28px
+		width 577px
+		height 708px
+		float left
+		overflow hidden

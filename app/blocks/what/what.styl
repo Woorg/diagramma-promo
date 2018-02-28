@@ -1,2 +1,26 @@
 .what
-	display block
+	background url('../images/general/what-bg.jpg') 50% 0 no-repeat
+	&__container
+		@extends .container
+		padding-top 160px
+		padding-bottom 104px
+		clr()
+	&__w
+		float right
+		width 673px
+	&__title
+		margin-bottom 50px
+		@extends .title-sec
+	// &__list
+	&__item
+		position relative
+		margin-bottom 38px
+		padding-left 64px
+		&:after
+			position absolute
+			top 50%
+			left 12px
+			retinaSprite($check_group)
+			content ''
+			transform translateY(-50%)
+
